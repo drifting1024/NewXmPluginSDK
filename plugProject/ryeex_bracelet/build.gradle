@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "26.0.3"
+
+    defaultConfig {
+        //需要配置为插件包名
+        applicationId "com.ryeex.sake"
+        minSdkVersion 14
+        targetSdkVersion 28
+        //每次发布版本versionCode必须加1
+        versionCode 28
+        versionName "1.0.4"
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    signingConfigs {
+        release {
+            //需要重新配置插件的签名文件
+            storeFile new File("${project.projectDir}/keystore/ryeex_release.keystore")
+            storePassword 'Ryeex@2017'
+            keyAlias 'release_key'
+            keyPassword 'Ryeex@2017'
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //如果依赖apache http类，使用下面指令
+//    useLibrary 'org.apache.http.legacy'
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.protobuf:protobuf-java:3.4.0'
+    compile 'com.android.support:support-annotations:23.3.0'
+}
+
+
+//如果有其他项目依赖，添加下面属性，项目名字相对于插件根目录
+//project.ext.set("complieProject",[":demolib"])
+
+
+//插件依赖下面脚本编译
+apply from: "${project.rootDir.absolutePath}/plug.gradle"

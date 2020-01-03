@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">com.ryeex.sake</string>
+
+    <string name="current_step">Current Steps</string>
+    <string name="target_step">Target Steps</string>
+    <string name="heart_rate">Heart Rate</string>
+    <string name="heart_rate_unit">cpm</string>
+    <string name="last_heart_rate">Recent Heart Rate</string>
+    <string name="last_measure">Last measurement</string>
+
+    <string name="scene">Automation</string>
+    <string name="scene_add">Add automation</string>
+    <string name="scene_edit">Show automation</string>
+    <string name="scene_need_gateway">Need Ble gateway supported</string>
+
+    <string name="ota_progress_dialog_title">Firmware update(Waiting for start)</string>
+    <string name="ota_progress_dialog_title_downloading">Firmware update(Downloading)</string>
+    <string name="ota_progress_dialog_title_transferring">Firmware update(Transferring)</string>
+    <string name="ota_progress_dialog_title_wait_rebooting">Firmware update(Waiting for reboot)</string>
+
+    <string name="ota_success">Firmware update success</string>
+    <string name="ota_wait_reboot">Please wait for reboot</string>
+
+    <string name="confirm_dialog_fragment_confirm">Confirm</string>
+    <string name="confirm_dialog_fragment_cancel">Cancel</string>
+
+    <string name="ota_dialog_title">Bracelet firmware has new version</string>
+    <string name="ota_dialog_confirm">Update now</string>
+    <string name="ota_dialog_cancel">Cancel</string>
+    <string name="ota_changelog">Change log</string>
+
+</resources>

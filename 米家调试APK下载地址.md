@@ -16,3 +16,9 @@
 加载64位 so 下载地址(所有 java 插件必须要适配)：
 
 [https://pan.mioffice.cn:443/link/386737374087094876A1A6DEED544372](https://pan.mioffice.cn:443/link/386737374087094876A1A6DEED544372)
+
+
+
+最新调试版本（密码keliyuan）：
+
+[https://fir.im/MiHomeForAndroid](https://fir.im/MiHomeForAndroid)
